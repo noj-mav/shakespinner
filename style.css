@@ -1,0 +1,141 @@
+:root {
+  --bcl-light-blue: #82cff5;
+  --bcl-dark-blue: #14263b;
+  --bcl-red: #e51551;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--bcl-dark-blue);
+  background-color: #14263b;
+}
+
+header {
+  padding: 1rem;
+  max-width: 640px;
+  margin: auto;
+}
+
+nav {
+  margin: auto;
+  padding: 1rem;
+  position: fixed;
+  max-width: 640px;
+}
+
+main {
+  display: flex;
+  margin: auto;
+  max-width: 640px;
+}
+
+.bg {
+  background-image: url("images/bcl-bg.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+}
+
+aside {
+  border-radius: 5px;
+  color: white;
+  float: left;
+  padding: 1.5rem;
+}
+
+.logo-container {
+  width: 12.5rem;
+}
+
+.logo {
+  width: 12.5rem;
+}
+
+article {
+  color: white;
+  padding: 3rem 1.5rem
+}
+
+p {
+ margin: 20px 0;
+}
+
+article p:nth-child(2n + 0) {
+  color: var(--bcl-light-blue);
+}
+
+#pusher {
+  border-right: 3px solid var(--bcl-light-blue);
+  width: 20px;
+}
+
+.spinner {
+  cursor: pointer;
+  max-width: 40px;
+  overflow: hidden;
+  transition: max-width 0.5s;
+}
+
+/*
+ * Credits: https://www.w3schools.com/howto/howto_css_shake_image.asp
+ */
+.shake img,
+.spinner:hover img {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
